@@ -148,7 +148,7 @@ img {
   padding: 192px 0;
   background-color: #66C05D;
   background-image: url("../img/intro-bg.png");
-  background-position: center right 75px;
+  background-position: center right calc(50% - 250px);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -196,6 +196,7 @@ img {
 
 .cards{
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -206,7 +207,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 255px;
+  width: 245px;
   background-color: #fff;
   padding: 25px 30px;
 }
@@ -272,12 +273,17 @@ img {
 
 .sale-title {
   margin: 0;
+  width: 250px;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .sale-text {
   margin: 0;
   margin: 25px 0;
-
+  width: 215px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .sale__left{
@@ -285,6 +291,9 @@ img {
   width: 540px;
   margin-right: 30px;
   padding: 35px 40px;
+  background-image: url("../img/letter-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center  right calc(50% - 150px);
 }
 
 .sale__right {
@@ -324,4 +333,11 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
+  .intro {
+    background-image: url("../img/intro-bg@2x.png");
+  }
+
+  .card-text::before {
+    background-image: url("../img/card-img@2x.png");
+  }
 }
