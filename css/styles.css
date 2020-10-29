@@ -79,12 +79,26 @@ img {
 }
 
 .nav-link {
+  position: relative;
   text-decoration: none;
   color: #333;
   font-size: 14px;
   white-space: nowrap;
   margin: 15px 30px;
   display: inline-block;
+}
+
+.nav-link:hover::after,
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 110%;
+  display: block;
+  width: 100%;
+  background-color: #66C05D;
+  height: 3px;
+  border-radius: 30%;
 }
 
 .site-header__center {
